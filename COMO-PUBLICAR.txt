@@ -1,7 +1,7 @@
 LANDING PAGE ARTFLIX · COMO USAR
 
 1) Abra o index.html num editor de texto e vá até o fim, na parte "EDITE AQUI":
-     precoBasico:      preço do Kit Básico           ex.: "R$ 10,00"
+     precoBasico:      preço do Kit Básico           ex.: "R$ 10,00" (já preenchido)
      precoCompleto:    preço do Kit Completo         ex.: "R$ 19,90"
      precoBonus:       preço dos 6 bônus             ex.: "R$ 5,50"
      checkoutBasico:   link de compra do Kit Básico

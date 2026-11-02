@@ -6,7 +6,7 @@
 <title>ArtFlix · Materiais prontos para professores de Arte</title>
 <meta name="description" content="Atividades, slides, planos anuais, aulas de emergência, dinâmicas e provas de Arte, prontos para usar na segunda-feira.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Hanken+Grotesk:wght@400;500;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <style>
 :root{
   --serif:'Instrument Serif','Bitstream Charter',Georgia,serif;
@@ -32,9 +32,16 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:90;opa
 .barra{position:fixed;top:0;left:0;height:4px;width:var(--sp,0%);z-index:100;background:linear-gradient(90deg,#d8452e,#e9a23b,#3d6fd1,#2f8f6b)}
 
 /* topo */
-.topo{position:fixed;top:0;left:0;right:0;z-index:80;display:flex;justify-content:space-between;align-items:center;padding:18px clamp(16px,4vw,48px);color:#fff;mix-blend-mode:difference}
-.topo .logo{font-family:var(--serif);font-size:1.9rem;text-decoration:none;letter-spacing:-.01em}
-.topo .ir{font-weight:500;font-size:.95rem;text-decoration:none;border:1.5px solid #fff;border-radius:99px;padding:8px 20px}
+.topo{position:fixed;top:0;left:0;right:0;z-index:80;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:14px clamp(16px,4vw,48px);color:#fff;background:linear-gradient(180deg,rgba(0,0,0,.85),rgba(0,0,0,0));transition:background .3s,padding .3s}.topo.solido{background:rgba(14,11,10,.92);backdrop-filter:blur(8px);padding-top:10px;padding-bottom:10px}
+.topo .logo{text-decoration:none;font-family:'Bebas Neue',Impact,'Arial Narrow',sans-serif;font-size:2.5rem;line-height:1;letter-spacing:.06em;transform:scaleY(1.12);display:inline-block}
+.logo span,#intro span{background:linear-gradient(100deg,#9c0610 0%,#e50914 38%,#ff7a7a 50%,#e50914 62%,#9c0610 100%);background-size:260% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:brilho 4s linear infinite;filter:drop-shadow(0 0 14px rgba(229,9,20,.45))}
+@keyframes brilho{to{background-position:-260% 0}}
+.menu{display:flex;gap:30px;margin-left:auto}
+.menu a{text-decoration:none;font-weight:500;font-size:.95rem;position:relative;padding:6px 0;color:#e8e2d6}
+.menu a::after{content:"";position:absolute;left:50%;right:50%;bottom:0;height:2px;background:var(--ouro);transition:left .25s,right .25s}
+.menu a:hover{color:#fff}.menu a:hover::after{left:0;right:0}
+.topo .ir{font-weight:700;font-size:.95rem;text-decoration:none;background:var(--ouro);color:#1a1408;border-radius:99px;padding:10px 24px;box-shadow:0 0 0 0 rgba(202,162,74,.6);animation:pulsa 2.8s infinite;transition:transform .2s}.topo .ir:hover{transform:scale(1.06)}
+@keyframes pulsa{0%{box-shadow:0 0 0 0 rgba(202,162,74,.55)}70%,100%{box-shadow:0 0 0 14px rgba(202,162,74,0)}}
 
 /* placa da sala (indicador fixo) */
 .sala-ind{position:fixed;left:clamp(16px,4vw,48px);bottom:18px;z-index:80;background:rgba(20,17,15,.78);backdrop-filter:blur(6px);color:var(--giz);border:1px solid rgba(255,255,255,.18);border-radius:6px;padding:7px 14px;font-size:.85rem;display:flex;gap:10px;align-items:baseline;transition:opacity .3s}
@@ -262,12 +269,59 @@ footer .cr{margin-top:12px;opacity:.8}
   .barra-cta{left:12px;right:12px;bottom:12px;justify-content:space-between}
 }
 @media (max-width:560px){.grid6{grid-template-columns:1fr}}
+
+/* abertura estilo streaming */
+#intro{position:fixed;inset:0;z-index:500;background:#000;display:grid;place-items:center;pointer-events:none;animation:sai 2.6s forwards}
+#intro span{font-family:'Bebas Neue',Impact,'Arial Narrow',sans-serif;font-size:clamp(5rem,22vw,17rem);letter-spacing:.06em;line-height:1;transform:scaleY(1.12);animation:brilho 2s linear infinite,tadum 2.2s cubic-bezier(.2,.8,.2,1) forwards}
+@keyframes tadum{0%{opacity:0;transform:scale(1.7,1.9);letter-spacing:.3em}35%{opacity:1;transform:scale(1,1.12);letter-spacing:.06em}85%{opacity:1;transform:scale(1.04,1.16)}100%{opacity:0;transform:scale(1.5,1.7)}}
+@keyframes sai{0%,82%{opacity:1;visibility:visible}100%{opacity:0;visibility:hidden}}
+/* cards crescem ao passar o mouse */
+.cluster .moldura,.grid6 .moldura{transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s;position:relative}
+.cluster .moldura:hover{transform:scale(1.16) rotate(0deg)!important;z-index:6;box-shadow:inset 0 0 0 2px var(--ouro),0 30px 50px -10px #000}
+.grid6 .obra:hover .moldura{transform:scale(1.05);box-shadow:inset 0 0 0 2px var(--ouro),0 50px 50px -22px rgba(30,20,0,.85);z-index:2}
+/* selos do hero em círculo */
+.selos{gap:12px}
+.selos li{display:flex;align-items:center;gap:10px;border:1px solid rgba(255,255,255,.28);border-radius:99px;padding:7px 18px 7px 7px;background:rgba(255,255,255,.07);backdrop-filter:blur(4px);font-weight:500}
+.selos li::before{content:"";flex:none;margin:0;width:26px;height:26px;border-radius:50%;border:0;top:0;transform:none;background:var(--ouro) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'><path d='M7 13.5l4 4 8-9' fill='none' stroke='%231a1408' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/></svg>") center/100% no-repeat;box-shadow:0 0 12px rgba(202,162,74,.55)}
+/* aviso de anúncios */
+.ing li.aviso{margin-top:6px;background:#fff0cf;border:1px solid #e0b25a;border-radius:8px;padding:11px 14px 11px 46px;font-size:.95rem}
+.ing li.aviso::before{content:"!";border:0;transform:none;left:13px;top:50%;margin-top:-12px;width:24px;height:24px;border-radius:50%;background:#c97a00;color:#fff;font-weight:700;text-align:center;line-height:24px;font-size:1rem}
+/* garantia dourada centralizada */
+.garantia{flex-direction:column;align-items:center;text-align:center;margin:clamp(50px,7vw,90px) auto 0;max-width:640px}
+.selo-ouro{width:clamp(180px,22vw,230px);filter:drop-shadow(0 18px 30px rgba(0,0,0,.5)) drop-shadow(0 0 26px rgba(243,217,141,.35));animation:flutua 5s ease-in-out infinite}
+.selo-ouro .gira{transform-origin:100px 100px;animation:giro 40s linear infinite}
+@keyframes giro{to{transform:rotate(360deg)}}@keyframes flutua{50%{transform:translateY(-8px)}}
+.garantia h3{font-size:clamp(2.4rem,5vw,3.4rem);margin-top:10px}
+/* linha do tempo */
+.t-passos{text-align:center;font-size:clamp(2rem,4vw,3rem);margin:clamp(60px,8vw,100px) 0 40px}
+.lt{position:relative;max-width:860px;margin:0 auto;padding:10px 0}
+.lt-trilho{position:absolute;left:50%;top:0;bottom:0;width:4px;margin-left:-2px;background:rgba(255,255,255,.14);border-radius:4px}
+.lt-fill{width:100%;height:var(--lt,0%);background:linear-gradient(var(--ouro),#f3d98d);border-radius:4px;box-shadow:0 0 14px var(--ouro)}
+.lt-passo{position:relative;display:flex;margin-bottom:56px}.lt-passo:last-child{margin-bottom:0}
+.lt-passo:nth-child(odd){justify-content:flex-start}.lt-passo:nth-child(even){justify-content:flex-end}
+.lt-passo .cartao{width:43%;padding:18px 22px;border:1px solid rgba(255,255,255,.18);border-radius:10px;background:rgba(255,255,255,.04);color:#cfb0a8;opacity:.45;transition:opacity .5s,border-color .5s}
+.lt-passo:nth-child(odd) .cartao{text-align:right}
+.lt-passo .cartao b{display:block;font-family:var(--serif);font-weight:400;font-size:1.7rem;line-height:1.1;color:#fff;margin-bottom:4px}
+.lt-passo .no{position:absolute;left:50%;top:50%;width:46px;height:46px;margin:-23px 0 0 -23px;border-radius:50%;border:3px solid rgba(255,255,255,.3);background:var(--vinho);display:grid;place-items:center;font-family:var(--serif);font-size:1.6rem;color:#cfb0a8;z-index:2;transition:all .5s}
+.lt-passo.on .no{background:var(--ouro);border-color:#f3d98d;color:#2a1a04;box-shadow:0 0 0 7px rgba(202,162,74,.25),0 0 24px var(--ouro)}
+.lt-passo.on .cartao{opacity:1;border-color:var(--ouro)}
+@media (max-width:899px){
+  .menu{display:none}.topo{justify-content:space-between}.topo .logo{font-size:2.1rem}
+  .lt-trilho{left:23px;margin-left:-2px}
+  .lt-passo,.lt-passo:nth-child(even){justify-content:flex-start;padding-left:62px}
+  .lt-passo .cartao{width:100%}.lt-passo:nth-child(odd) .cartao{text-align:left}
+  .lt-passo .no{left:23px}
+}
+@media (prefers-reduced-motion:reduce){#intro{display:none}.logo span{animation:none}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 </style>
 </head>
 <body>
 <div class="barra" aria-hidden="true"></div>
-<header class="topo"><a class="logo" href="#">ArtFlix</a><a class="ir" href="#oferta">Ver os kits</a></header>
+<header class="topo" id="topoBar"><a class="logo" href="#topo" aria-label="ArtFlix"><span>ARTFLIX</span></a>
+  <nav class="menu" aria-label="Seções"><a href="#produtos">Produtos</a><a href="#paginas-reais">Páginas reais</a><a href="#oferta">Kits</a><a href="#duvidas">Dúvidas</a></nav>
+  <a class="ir" href="#oferta">Ver os kits</a></header>
+<div id="intro" aria-hidden="true"><span>ARTFLIX</span></div>
 <div class="sala-ind" id="salaInd" aria-hidden="true"><b id="salaN">1</b><span id="salaT">Entrada</span></div>
 
 <main>
@@ -351,7 +405,7 @@ footer .cr{margin-top:12px;opacity:.8}
 </section>
 
 <!-- SALA 5: LUPA -->
-<section class="s s-rosa" data-sala="De perto">
+<section class="s s-rosa" data-sala="De perto" id="paginas-reais">
   <div class="cx">
     <h2>Veja as páginas reais do kit</h2>
     <p class="sub">Nada de imagem ilustrativa. Passe o cursor para ampliar.</p>
@@ -380,13 +434,14 @@ footer .cr{margin-top:12px;opacity:.8}
     <div class="ingressos">
       <article class="ing">
         <div class="ing-corpo">
-          <p class="tipo">Entrada geral</p><h3>Kit Básico</h3>
+          <h3>Kit Básico</h3>
           <ul>
             <li>Plataforma ArtFlix no estilo streaming</li>
             <li>Documentários e videoaulas de Arte</li>
             <li>Ficha de aula para cada título</li>
             <li>Trilhas de história da arte</li>
             <li>Funciona no celular e no computador</li>
+            <li class="aviso"><b>Atenção:</b> nos documentários e videoaulas do Kit Básico há anúncios.</li>
             <li class="nao">Os 6 bônus</li>
           </ul>
         </div>
@@ -394,9 +449,9 @@ footer .cr{margin-top:12px;opacity:.8}
         <div class="ing-canhoto"><div><div class="valor" data-cfg="precoBasico"></div><small>pagamento único</small></div><button type="button" class="btn" id="abrir-basico">Quero o básico</button></div>
       </article>
       <article class="ing ing--top" id="plano">
-        <span class="selo">Mais completo</span>
+        
         <div class="ing-corpo">
-          <p class="tipo">Passe livre por todas as salas</p><h3>Kit Completo ArtFlix</h3>
+          <h3>Kit Completo ArtFlix</h3>
           <div class="mini-capas"><img src="img/capa-atividades.webp" alt=""><img src="img/capa-slides.webp" alt=""><img src="img/capa-plano.webp" alt=""><img src="img/capa-emergencia.webp" alt=""><img src="img/capa-dinamicas.webp" alt=""><img src="img/capa-provas.webp" alt=""></div>
           <ul>
             <li>Plataforma ArtFlix no estilo streaming</li>
@@ -413,19 +468,23 @@ footer .cr{margin-top:12px;opacity:.8}
       </article>
     </div>
     <div class="garantia">
-      <div class="medalha" aria-hidden="true"><b>7</b><span>dias</span></div>
-      <div><h3>Garantia de 7 dias</h3><p>Se o material não for o que você esperava, peça o reembolso em até 7 dias após a compra, conforme o direito de arrependimento do Código de Defesa do Consumidor (art. 49).</p></div>
+      <div class="selo-ouro" aria-hidden="true"><svg viewBox="0 0 200 200"><defs><radialGradient id="og" cx="35%" cy="30%" r="80%"><stop offset="0" stop-color="#fff2bd"/><stop offset=".45" stop-color="#e3b84f"/><stop offset="1" stop-color="#8a5f12"/></radialGradient><path id="anel" d="M100,100 m-76,0 a76,76 0 1,1 152,0 a76,76 0 1,1 -152,0"/></defs>
+        <circle cx="100" cy="100" r="96" fill="url(#og)"/><circle cx="100" cy="100" r="88" fill="none" stroke="#5a3a07" stroke-width="1.5" stroke-dasharray="2 5"/><circle cx="100" cy="100" r="60" fill="#531c28" stroke="#f3d98d" stroke-width="3"/>
+        <g class="gira"><text font-family="Hanken Grotesk,sans-serif" font-size="15" font-weight="700" letter-spacing="3.4" fill="#3a2306"><textPath href="#anel" startOffset="0">GARANTIA ARTFLIX · GARANTIA ARTFLIX ·</textPath></text></g>
+        <text x="100" y="118" text-anchor="middle" font-family="Instrument Serif,Georgia,serif" font-size="68" fill="#f3d98d">7</text><text x="100" y="140" text-anchor="middle" font-family="Hanken Grotesk,sans-serif" font-size="14" font-weight="700" fill="#f3d98d" letter-spacing="2">DIAS</text></svg></div>
+      <h3>Garantia de 7 dias</h3><p>Se o material não for o que você esperava, peça o reembolso em até 7 dias após a compra, conforme o direito de arrependimento do Código de Defesa do Consumidor (art. 49).</p>
     </div>
-    <ol class="passos">
-      <li><b>Faça a compra</b>Pagamento pela plataforma segura.</li>
-      <li><b>Receba o acesso</b>O link chega após a confirmação do pagamento.</li>
-      <li><b>Projete, imprima e dê aula</b>Os arquivos ficam com você para as suas turmas.</li>
-    </ol>
+    <h3 class="t-passos">Como você recebe o acesso</h3>
+    <div class="lt" id="lt"><div class="lt-trilho"><div class="lt-fill"></div></div>
+      <div class="lt-passo"><span class="no">1</span><div class="cartao"><b>Faça a compra</b>Pagamento pela plataforma segura.</div></div>
+      <div class="lt-passo"><span class="no">2</span><div class="cartao"><b>Receba o acesso</b>O link chega após a confirmação do pagamento.</div></div>
+      <div class="lt-passo"><span class="no">3</span><div class="cartao"><b>Projete, imprima e dê aula</b>Os arquivos ficam com você para as suas turmas.</div></div>
+    </div>
   </div>
 </section>
 
 <!-- SALA 8: DÚVIDAS -->
-<section class="s s-giz" data-sala="Dúvidas">
+<section class="s s-giz" data-sala="Dúvidas" id="duvidas">
   <div class="cx duv">
     <h2>Dúvidas</h2>
     <div>
@@ -473,9 +532,9 @@ footer .cr{margin-top:12px;opacity:.8}
    preco*:     o valor que aparece nos ingressos
    checkout*:  o link da sua página de pagamento (Wiven, Kiwify, Hotmart, Eduzz...) */
 const CONFIG = {
-  precoBasico: "R$ XX,XX",      // preço do Kit Básico
-  precoCompleto: "R$ XX,XX",    // preço do Kit Completo
-  precoBonus: "R$ XX,XX",       // preço dos 6 bônus (oferecidos na janela do Kit Básico)
+  precoBasico: "R$ 10,00",      // preço do Kit Básico
+  precoCompleto: "R$ 19,90",    // preço do Kit Completo
+  precoBonus: "R$ 5,50",       // preço dos 6 bônus (oferecidos na janela do Kit Básico)
   checkoutBasico: "",           // link de compra do Kit Básico
   checkoutBonus: "",            // link de compra dos bônus
   checkoutCompleto: ""          // link de compra do Kit Completo
@@ -586,6 +645,11 @@ const CONFIG = {
     // barra de compra
     const of = $('#oferta').getBoundingClientRect(), ds = scrollY > innerHeight * .7;
     $('#barraCta').classList.toggle('on', ds); $('#barraCta').classList.toggle('off', of.top < vh && of.bottom > 0);
+    // cabeçalho sólido e linha do tempo
+    $('#topoBar').classList.toggle('solido', scrollY > 40);
+    const lt = $('#lt').getBoundingClientRect();
+    $('#lt').style.setProperty('--lt', clamp((vh * .62 - lt.top) / lt.height * 100, 0, 100) + '%');
+    $$('.lt-passo').forEach(p => p.classList.toggle('on', p.querySelector('.no').getBoundingClientRect().top < vh * .62));
     // sala atual
     let n = 0; secs.forEach((s, i) => { if (s.getBoundingClientRect().top < vh * .5) n = i; });
     if (n !== atual) { atual = n; $('#salaN').textContent = n + 1; $('#salaT').textContent = secs[n].dataset.sala; }
