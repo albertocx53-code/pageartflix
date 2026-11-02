@@ -1,0 +1,12 @@
+LANDING PAGE ARTFLIX · COMO USAR
+
+1) Abra o index.html num editor de texto e vá até o fim, na parte "EDITE AQUI":
+     preco:    "R$ XX,XX"  -> seu preço
+     parcelas: ""          -> opcional, ex.: "ou 5x de R$ 10,46"
+     checkout: "#"         -> link do seu checkout (Wiven, Kiwify, Hotmart...)
+   Enquanto não preencher, aparece uma faixa amarela de aviso no topo.
+2) Publique a pasta inteira (index.html + pasta img) na Vercel/Netlify/seu servidor.
+   A pasta "img" (com a subpasta "obras") precisa ficar no mesmo nível do index.html.
+3) As capas dos produtos estão em img/capa-*.webp: para trocar, substitua mantendo o nome.
+4) As obras de arte (img/obras) são de domínio público (Wikimedia Commons);
+   os créditos aparecem automaticamente no rodapé.
