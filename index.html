@@ -202,6 +202,66 @@ footer .cr{margin-top:12px;opacity:.8}
   .dica{display:none}
   .sala-ind{display:none}
 }
+
+/* ===== vendas ===== */
+.btn--grande{padding:20px 40px;font-size:1.15rem}
+.btn--escuro{background:#241a08;color:#f4e3b5;box-shadow:none}
+.s-hero{align-items:center}
+.s-hero::before{background:linear-gradient(90deg,rgba(21,17,15,.94) 0%,rgba(21,17,15,.78) 45%,rgba(21,17,15,.25) 100%)}
+.hero-grid{position:relative;z-index:3;display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(24px,5vw,70px);align-items:center;max-width:1240px;margin:0 auto;width:100%;padding:110px clamp(20px,5vw,64px) 90px}
+.hero-txt{padding:0;margin:0;max-width:none}
+.hero-txt .para{font-size:1rem;color:var(--ouro);font-weight:500;margin:0 0 14px}
+.hero-txt h1{font-size:clamp(2.9rem,min(7vw,12vh),6.6rem);max-width:13ch}
+.hero-txt .sub{font-size:1.2rem;max-width:44ch;margin:24px 0 30px;color:#e6e0d3}
+.hero-acoes{display:flex;gap:22px;align-items:center;flex-wrap:wrap}
+.link{font-weight:500;text-underline-offset:5px}
+.selos{list-style:none;display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:30px;font-size:.95rem;color:#d8d0c0}
+.selos li::before{content:"";display:inline-block;width:10px;height:5px;border-left:2.5px solid var(--ouro);border-bottom:2.5px solid var(--ouro);transform:rotate(-45deg);margin-right:10px;position:relative;top:-3px}
+.cluster{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(10px,1.6vw,20px)}
+.cluster .moldura{padding:5px;border-width:7px;box-shadow:inset 0 0 0 2px var(--ouro),0 24px 30px -16px #000;cursor:default}
+.cluster .moldura:nth-child(1){transform:rotate(-3deg)}.cluster .moldura:nth-child(2){transform:translateY(16px) rotate(2deg)}.cluster .moldura:nth-child(3){transform:rotate(-1.5deg)}
+.cluster .moldura:nth-child(4){transform:translateY(-6px) rotate(2.5deg)}.cluster .moldura:nth-child(5){transform:translateY(10px) rotate(-2.5deg)}.cluster .moldura:nth-child(6){transform:rotate(2deg)}
+.t-dor{max-width:16ch;margin-bottom:clamp(30px,5vw,56px)}
+.dores{list-style:none;display:grid;gap:0;max-width:760px}
+.dores li{font-family:var(--serif);font-size:clamp(1.5rem,3.2vw,2.4rem);line-height:1.15;padding:16px 0;border-top:1px solid rgba(255,255,255,.2);position:relative;color:#fff}
+.dores li:last-child{border-bottom:1px solid rgba(255,255,255,.2)}
+.dores li::after{content:"";position:absolute;left:0;top:50%;height:3px;width:0;background:#e9a23b;transition:width .7s ease}
+.dores li.on{color:#9aa4d6}.dores li.on::after{width:100%}
+.virada{font-family:var(--serif);font-size:clamp(1.8rem,4vw,3rem);line-height:1.1;max-width:22ch;margin:clamp(36px,6vw,64px) 0 clamp(36px,6vw,64px);color:#f3d98d}
+.cta-centro{text-align:center;margin-top:clamp(36px,5vw,60px)}
+.s-ocre{padding:clamp(80px,12vw,150px) clamp(20px,5vw,64px)}
+.s-ocre .sub,.s-rosa .sub{max-width:46ch;margin-top:16px;font-size:1.1rem}
+.grid6{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(30px,4vw,56px);margin-top:clamp(40px,6vw,70px)}
+.grid6 .obra{width:auto}
+.turmas{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(16px,2.4vw,30px);margin-top:clamp(36px,5vw,60px)}
+.turma .tela{aspect-ratio:3/4;background-size:cover;background-position:center;border:8px solid #2a2118;box-shadow:inset 0 0 0 2px var(--ouro),0 24px 30px -20px rgba(0,0,0,.6);margin-bottom:16px}
+.turma h3{font-size:1.9rem;margin-bottom:6px}.turma p{font-size:.98rem;max-width:30ch}
+.t-turmas{max-width:12ch}
+.s-vinho .sub{margin-top:14px;max-width:48ch;color:#e7c9c0}
+.mini-capas{display:grid;grid-template-columns:repeat(6,1fr);gap:6px;margin-top:18px}
+.mini-capas img{aspect-ratio:1;object-fit:cover;border:2px solid #3a2a12}
+.garantia{display:flex;gap:26px;align-items:center;margin:clamp(40px,6vw,70px) 0 0;max-width:760px;color:#f6e8e3}
+.garantia h3{font-size:2.2rem;margin-bottom:6px}.garantia p{color:#e7c9c0;font-size:1rem}
+.medalha{flex:none;width:104px;height:104px;border-radius:50%;background:radial-gradient(circle,#f0cf74,#caa24a);color:#3a2306;display:grid;place-content:center;text-align:center;box-shadow:0 0 0 5px #531c28,0 0 0 7px #caa24a,0 14px 24px rgba(0,0,0,.4);line-height:1}
+.medalha b{font-family:var(--serif);font-weight:400;font-size:3.2rem}.medalha span{font-size:.9rem;font-weight:700}
+.passos{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,3vw,36px);margin-top:clamp(36px,5vw,56px);counter-reset:p}
+.passos li{counter-increment:p;border-top:2px solid var(--ouro);padding-top:16px;font-size:.98rem;color:#e7c9c0}
+.passos li::before{content:counter(p);font-family:var(--serif);font-size:2.4rem;color:var(--ouro);display:block;line-height:1;margin-bottom:6px}
+.passos b{display:block;color:#fff;font-size:1.1rem;margin-bottom:3px}
+.s-giz .t-turmas+.turmas{color:#1e1a16}
+.barra-cta{position:fixed;right:clamp(16px,4vw,48px);bottom:18px;z-index:85;display:flex;align-items:center;gap:14px;background:var(--ouro);color:#1a1408;border-radius:99px;padding:10px 12px 10px 22px;text-decoration:none;font-weight:700;box-shadow:0 14px 34px -10px rgba(0,0,0,.6);transition:transform .3s,opacity .3s;transform:translateY(150%)}
+.barra-cta.on{transform:none}.barra-cta.off{opacity:0;pointer-events:none;transform:translateY(150%)}
+.barra-cta span,.barra-cta b{white-space:nowrap}.barra-cta b{font-family:var(--serif);font-weight:400;font-size:1.5rem;line-height:1}
+.barra-cta i{font-style:normal;background:#241a08;color:#f4e3b5;border-radius:99px;padding:9px 20px}
+@media (max-width:899px){
+  .hero-grid{grid-template-columns:1fr;padding:96px 20px 70px;gap:34px}
+  .s-hero::before{background:linear-gradient(0deg,rgba(21,17,15,.5),rgba(21,17,15,.88))}
+  .cluster{max-width:420px}
+  .grid6{grid-template-columns:1fr 1fr}.turmas{grid-template-columns:1fr 1fr}.passos{grid-template-columns:1fr}
+  .garantia{flex-direction:column;align-items:flex-start}
+  .barra-cta{left:12px;right:12px;bottom:12px;justify-content:space-between}
+}
+@media (max-width:560px){.grid6{grid-template-columns:1fr}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 </style>
 </head>
@@ -211,21 +271,42 @@ footer .cr{margin-top:12px;opacity:.8}
 <div class="sala-ind" id="salaInd" aria-hidden="true"><b id="salaN">1</b><span id="salaT">Entrada</span></div>
 
 <main>
-<!-- SALA 1 -->
-<section class="s s-hero" data-sala="Entrada">
+<!-- SALA 1: HERO DE VENDAS -->
+<section class="s s-hero" data-sala="Entrada" id="topo">
   <div class="parede" id="parede" aria-hidden="true"><div class="grade apagada" id="gA"></div><div class="grade acesa" id="gB"></div></div>
-  <div class="hero-txt">
-    <h1>Dê aula de Arte como quem abre uma <em>exposição.</em></h1>
-    <p>Atividades, slides, planos, aulas de emergência, dinâmicas e provas, tudo pronto para você usar na segunda-feira.</p>
-    <a class="btn" href="#oferta">Quero o ArtFlix</a>
+  <div class="hero-grid">
+    <div class="hero-txt">
+      <p class="para">Para professores de Arte</p>
+      <h1>Pare de passar o domingo montando aula de <em>Arte.</em></h1>
+      <p class="sub">Plano anual, slides, atividades, aulas de emergência, dinâmicas e provas. Tudo pronto, do jeito que você abre, imprime e usa na segunda-feira.</p>
+      <div class="hero-acoes"><a class="btn btn--grande" href="#oferta">Quero o kit completo</a><a class="link" href="#produtos">Ver o que vem no kit</a></div>
+      <ul class="selos"><li>Alinhado à BNCC</li><li>Pronto para imprimir e projetar</li><li>Garantia de 7 dias</li></ul>
+    </div>
+    <div class="cluster" aria-label="As seis coleções do kit">
+      <div class="moldura"><img src="img/capa-plano.webp" alt="Plano de aula anual"></div>
+      <div class="moldura"><img src="img/capa-slides.webp" alt="Slides de aula"></div>
+      <div class="moldura"><img src="img/capa-atividades.webp" alt="Atividades para imprimir"></div>
+      <div class="moldura"><img src="img/capa-emergencia.webp" alt="Aulas de emergência"></div>
+      <div class="moldura"><img src="img/capa-dinamicas.webp" alt="Dinâmicas e debates"></div>
+      <div class="moldura"><img src="img/capa-provas.webp" alt="Provas e simulados"></div>
+    </div>
   </div>
   <p class="dica"><i></i>Mova o cursor para acender a sala</p>
 </section>
 
-<!-- SALA 2 -->
+<!-- SALA 2: A DOR -->
 <section class="s s-azul" data-sala="O domingo">
   <div class="cx">
-    <p class="fala" id="fala">Domingo à noite, a aula de segunda ainda não existe. Entre planejar, imprimir e montar os slides, o fim de semana vai embora. Aqui isso já chega pronto, e você chega na sala só para dar aula.</p>
+    <h2 class="t-dor">Com o ArtFlix, você não precisa mais...</h2>
+    <ul class="dores" id="dores">
+      <li>Passar o domingo à noite montando a aula da semana</li>
+      <li>Procurar atividade de Arte solta pela internet</li>
+      <li>Montar slides do zero para cada tema</li>
+      <li>Ficar sem saber o que deixar para o substituto</li>
+      <li>Escrever o planejamento anual e caçar os códigos da BNCC</li>
+      <li>Criar prova e gabarito na correria do fim do bimestre</li>
+    </ul>
+    <p class="virada">O ArtFlix reúne o material de Arte do ano inteiro para você abrir, projetar, imprimir e dar aula.</p>
     <div class="comp" id="comp">
       <img class="com" src="img/obras/@@A@@.jpg" alt="Pintura em cores">
       <img class="sem" src="img/obras/@@A@@.jpg" alt="">
@@ -234,24 +315,28 @@ footer .cr{margin-top:12px;opacity:.8}
       <input type="range" min="4" max="96" value="50" id="compR" aria-label="Arraste para comparar a segunda-feira sem e com o ArtFlix">
     </div>
     <p class="legenda">Arraste para ver a diferença.</p>
+    <p class="cta-centro"><a class="btn btn--grande" href="#oferta">Quero acabar com isso</a></p>
   </div>
 </section>
 
-<!-- SALA 3 -->
-<section class="s-ocre" data-sala="A exposição" id="exposicao">
-  <div class="pin" id="pin"><div class="pin-vis"><div class="trilho" id="trilho">
-    <div class="abertura"><h2>Seis salas para o seu ano letivo</h2><p>Cada coleção resolve uma parte da sua rotina. Role para percorrer.</p></div>
-    <figure class="obra"><div class="moldura" data-zoom="img/capa-atividades.webp"><img src="img/capa-atividades.webp" alt="Atividades para imprimir"></div><figcaption class="placa"><b>Atividades para imprimir</b>Caça-palavras, cruzadinha, ligue, complete, leitura de obra e desenho, organizados por tema.<small>Educação Infantil e Fundamental I · PDF</small></figcaption></figure>
-    <figure class="obra"><div class="moldura" data-zoom="img/capa-slides.webp"><img src="img/capa-slides.webp" alt="Slides de aula"></div><figcaption class="placa"><b>Slides de aula</b>Aulas prontas em vários estilos artísticos. Apresente, edite e baixe em PowerPoint ou PDF.<small>Fundamental II e Médio · PowerPoint</small></figcaption></figure>
-    <figure class="obra"><div class="moldura" data-zoom="img/capa-plano.webp"><img src="img/capa-plano.webp" alt="Plano de aula anual"></div><figcaption class="placa"><b>Plano de aula anual</b>Um plano para cada ano escolar, por bimestre, com as habilidades da BNCC.<small>Educação Infantil ao Médio · Word</small></figcaption></figure>
-    <figure class="obra"><div class="moldura" data-zoom="img/capa-emergencia.webp"><img src="img/capa-emergencia.webp" alt="Aulas de emergência"></div><figcaption class="placa"><b>Aulas de emergência</b>Roteiro para o professor e folha do aluno. Só papel, lápis e lápis de cor.<small>Educação Infantil ao Médio · PDF</small></figcaption></figure>
-    <figure class="obra"><div class="moldura" data-zoom="img/capa-dinamicas.webp"><img src="img/capa-dinamicas.webp" alt="Dinâmicas e debates"></div><figcaption class="placa"><b>Dinâmicas e debates</b>Jogos, júri simulado, aquário e outros formatos, com cartas e fichas para imprimir.<small>Fundamental I ao Médio · PDF</small></figcaption></figure>
-    <figure class="obra"><div class="moldura" data-zoom="img/capa-provas.webp"><img src="img/capa-provas.webp" alt="Provas e simulados"></div><figcaption class="placa"><b>Provas e simulados</b>Questões objetivas e dissertativas, cartão-resposta e gabarito comentado.<small>Fundamental I ao Médio · PDF</small></figcaption></figure>
-    <div class="fim-trilho"></div>
-  </div></div></div>
+<!-- SALA 3: OS PRODUTOS -->
+<section class="s s-ocre" data-sala="Os produtos" id="produtos">
+  <div class="cx">
+    <h2>Seis coleções num único kit</h2>
+    <p class="sub">Cada uma resolve uma parte da sua rotina. Clique na capa para ampliar.</p>
+    <div class="grid6">
+      <figure class="obra"><div class="moldura" data-zoom="img/capa-atividades.webp"><img src="img/capa-atividades.webp" alt="Atividades para imprimir"></div><figcaption class="placa"><b>Atividades para imprimir</b>Caça-palavras, cruzadinha, ligue, complete, leitura de obra e desenho, organizados por tema.<small>Educação Infantil e Fundamental I · PDF</small></figcaption></figure>
+      <figure class="obra"><div class="moldura" data-zoom="img/capa-slides.webp"><img src="img/capa-slides.webp" alt="Slides de aula"></div><figcaption class="placa"><b>Slides de aula</b>Aulas prontas em vários estilos artísticos. Apresente, edite e baixe em PowerPoint ou PDF.<small>Fundamental II e Médio · PowerPoint</small></figcaption></figure>
+      <figure class="obra"><div class="moldura" data-zoom="img/capa-plano.webp"><img src="img/capa-plano.webp" alt="Plano de aula anual"></div><figcaption class="placa"><b>Plano de aula anual</b>Um plano para cada ano escolar, por bimestre, com as habilidades da BNCC.<small>Educação Infantil ao Médio · Word</small></figcaption></figure>
+      <figure class="obra"><div class="moldura" data-zoom="img/capa-emergencia.webp"><img src="img/capa-emergencia.webp" alt="Aulas de emergência"></div><figcaption class="placa"><b>Aulas de emergência</b>Roteiro para o professor e folha do aluno. Só papel, lápis e lápis de cor.<small>Educação Infantil ao Médio · PDF</small></figcaption></figure>
+      <figure class="obra"><div class="moldura" data-zoom="img/capa-dinamicas.webp"><img src="img/capa-dinamicas.webp" alt="Dinâmicas e debates"></div><figcaption class="placa"><b>Dinâmicas e debates</b>Jogos, júri simulado, aquário e outros formatos, com cartas e fichas para imprimir.<small>Fundamental I ao Médio · PDF</small></figcaption></figure>
+      <figure class="obra"><div class="moldura" data-zoom="img/capa-provas.webp"><img src="img/capa-provas.webp" alt="Provas e simulados"></div><figcaption class="placa"><b>Provas e simulados</b>Questões objetivas e dissertativas, cartão-resposta e gabarito comentado.<small>Fundamental I ao Médio · PDF</small></figcaption></figure>
+    </div>
+    <p class="cta-centro"><a class="btn btn--escuro btn--grande" href="#oferta">Quero levar as seis coleções</a></p>
+  </div>
 </section>
 
-<!-- SALA 4 -->
+<!-- SALA 4: SITUAÇÕES -->
 <section class="s s-verde" data-sala="Situações">
   <div class="cx">
     <h2>Qual é a sua segunda-feira?</h2>
@@ -265,19 +350,33 @@ footer .cr{margin-top:12px;opacity:.8}
   </div>
 </section>
 
-<!-- SALA 5 -->
+<!-- SALA 5: LUPA -->
 <section class="s s-rosa" data-sala="De perto">
   <div class="cx">
-    <h2>Olhe de perto</h2>
-    <p class="sub">Estas são páginas reais do pacote. Passe o cursor para ampliar.</p>
+    <h2>Veja as páginas reais do kit</h2>
+    <p class="sub">Nada de imagem ilustrativa. Passe o cursor para ampliar.</p>
     <div class="paginas" id="paginas"></div>
   </div>
 </section>
 
-<!-- SALA 6 -->
+<!-- SALA 6: TURMAS -->
+<section class="s s-giz" data-sala="Turmas">
+  <div class="cx">
+    <h2 class="t-turmas">Serve para todas as turmas</h2>
+    <div class="turmas">
+      <article class="turma"><div class="tela" style="background-image:url(img/obras/girassois.jpg)"></div><h3>Educação Infantil</h3><p>Atividades, aulas de emergência e plano anual.</p></article>
+      <article class="turma"><div class="tela" style="background-image:url(img/obras/noite.jpg)"></div><h3>Fundamental I</h3><p>Atividades, dinâmicas, aulas de emergência, provas, simulados e planos.</p></article>
+      <article class="turma"><div class="tela" style="background-image:url(img/obras/monalisa.jpg)"></div><h3>Fundamental II</h3><p>Slides, debates, aulas de emergência, provas, simulados e planos.</p></article>
+      <article class="turma"><div class="tela" style="background-image:url(img/obras/grito.jpg)"></div><h3>Ensino Médio</h3><p>Slides, debates, provas no estilo Enem, simulados e planos.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- SALA 7: OFERTA -->
 <section class="s s-vinho" data-sala="Ingressos" id="oferta">
   <div class="cx">
     <h2>Escolha o seu ingresso</h2>
+    <p class="sub">Pagamento único. Você recebe o acesso depois da confirmação do pagamento.</p>
     <div class="ingressos">
       <article class="ing">
         <div class="ing-corpo">
@@ -295,9 +394,10 @@ footer .cr{margin-top:12px;opacity:.8}
         <div class="ing-canhoto"><div><div class="valor" data-cfg="precoBasico"></div><small>pagamento único</small></div><button type="button" class="btn" id="abrir-basico">Quero o básico</button></div>
       </article>
       <article class="ing ing--top" id="plano">
-        <span class="selo">Acesso total</span>
+        <span class="selo">Mais completo</span>
         <div class="ing-corpo">
           <p class="tipo">Passe livre por todas as salas</p><h3>Kit Completo ArtFlix</h3>
+          <div class="mini-capas"><img src="img/capa-atividades.webp" alt=""><img src="img/capa-slides.webp" alt=""><img src="img/capa-plano.webp" alt=""><img src="img/capa-emergencia.webp" alt=""><img src="img/capa-dinamicas.webp" alt=""><img src="img/capa-provas.webp" alt=""></div>
           <ul>
             <li>Plataforma ArtFlix no estilo streaming</li>
             <li>Documentários e videoaulas de Arte</li>
@@ -309,14 +409,22 @@ footer .cr{margin-top:12px;opacity:.8}
           </ul>
         </div>
         <div class="ing-picote"></div>
-        <div class="ing-canhoto"><div><div class="valor" data-cfg="precoCompleto"></div><small>pagamento único</small></div><a class="btn" href="#" id="btn-comprar" data-plano="completo">Quero o completo</a></div>
+        <div class="ing-canhoto"><div><div class="valor" data-cfg="precoCompleto"></div><small>pagamento único</small></div><a class="btn btn--grande" href="#" id="btn-comprar" data-plano="completo">Quero o completo</a></div>
       </article>
     </div>
-    <p class="garantia">Garantia de 7 dias: se o material não for o que você esperava, peça o reembolso em até 7 dias após a compra, conforme o direito de arrependimento do Código de Defesa do Consumidor (art. 49). Pagamento seguro.</p>
+    <div class="garantia">
+      <div class="medalha" aria-hidden="true"><b>7</b><span>dias</span></div>
+      <div><h3>Garantia de 7 dias</h3><p>Se o material não for o que você esperava, peça o reembolso em até 7 dias após a compra, conforme o direito de arrependimento do Código de Defesa do Consumidor (art. 49).</p></div>
+    </div>
+    <ol class="passos">
+      <li><b>Faça a compra</b>Pagamento pela plataforma segura.</li>
+      <li><b>Receba o acesso</b>O link chega após a confirmação do pagamento.</li>
+      <li><b>Projete, imprima e dê aula</b>Os arquivos ficam com você para as suas turmas.</li>
+    </ol>
   </div>
 </section>
 
-<!-- SALA 7 -->
+<!-- SALA 8: DÚVIDAS -->
 <section class="s s-giz" data-sala="Dúvidas">
   <div class="cx duv">
     <h2>Dúvidas</h2>
@@ -332,16 +440,18 @@ footer .cr{margin-top:12px;opacity:.8}
   </div>
 </section>
 
-<!-- SALA 8 -->
+<!-- SALA 9: FINAL -->
 <section class="s s-final" data-sala="Saída" id="final">
   <canvas id="tela" aria-hidden="true"></canvas>
   <div class="cx final-txt">
-    <h2>A próxima exposição é a sua aula.</h2>
-    <a class="btn" href="#oferta">Quero o ArtFlix</a>
+    <h2>Sua próxima aula de Arte pode ser a mais lembrada do ano.</h2>
+    <a class="btn btn--grande" href="#oferta">Quero o kit completo</a>
     <p class="nota">Pinte a parede com o cursor antes de ir.</p>
   </div>
 </section>
 </main>
+<a class="barra-cta" id="barraCta" href="#oferta"><span>Kit Completo</span><b data-cfg="precoCompleto"></b><i>Quero</i></a>
+
 
 <footer><p>ArtFlix · Materiais de Arte para professores · © <span id="ano">2026</span> · Uso individual, proibida a revenda.</p><p class="cr" id="creditos"></p></footer>
 
@@ -413,19 +523,17 @@ const CONFIG = {
   (function lanterna(t){ if (!mouse) { const r = par.getBoundingClientRect(); const w = r.width, h = r.height * .7; luz(w * (.5 + .38 * Math.sin(t / 2600)), h * (.45 + .32 * Math.sin(t / 1900 + 1))); } if (!reduce) requestAnimationFrame(lanterna); })(2000);
 
   /* ---- SALA 2: texto que acende + comparador ---- */
-  const fala = $('#fala'); fala.innerHTML = fala.textContent.split(' ').map(w => `<span>${w}</span>`).join(' ');
-  const ws = $$('#fala span');
   const comp = $('#comp');
   const A = OBRAS['primavera'] ? 'primavera' : ob[0];
   $$('#comp img').forEach(i => i.src = `img/obras/${A}.jpg`);
   $('#compR').addEventListener('input', e => comp.style.setProperty('--p', e.target.value + '%'));
 
-  /* ---- SALA 3: rolagem horizontal fixada (desktop) ---- */
-  const pin = $('#pin'), trilho = $('#trilho');
-  const mede = () => { if (innerWidth < 900) { pin.style.height = ''; trilho.style.transform = ''; return; } pin.style.height = (innerHeight + trilho.scrollWidth - innerWidth) + 'px'; };
-  addEventListener('resize', mede); addEventListener('load', mede); mede();
 
-  /* ---- SALA 4: situações ---- */
+  /* ---- dores riscadas ---- */
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { const i = $$('#dores li').indexOf(e.target); setTimeout(() => e.target.classList.add('on'), reduce ? 0 : i * 260); io.unobserve(e.target); } }), {threshold: .8});
+  $$('#dores li').forEach(l => io.observe(l));
+
+  /* ---- situações ---- */
   const SIT = [
     ['Faltou um professor e a turma está sem aula', 'Aulas de emergência', 'img/capa-emergencia.webp', 'Roteiro pronto para você e folha para o aluno. Só papel, lápis e lápis de cor.', ['Educação Infantil ao Médio','PDF']],
     ['Preciso planejar o ano inteiro', 'Plano de aula anual', 'img/capa-plano.webp', 'Um plano por ano escolar, dividido por bimestre, com os códigos das habilidades da BNCC.', ['Educação Infantil ao Médio','Word']],
@@ -473,14 +581,11 @@ const CONFIG = {
   const secs = $$('main > section'), ind = $('#salaInd');
   let atual = -1;
   function rola() {
-    const h = document.documentElement;
+    const h = document.documentElement, vh = innerHeight;
     $('.barra').style.setProperty('--sp', (h.scrollTop / (h.scrollHeight - h.clientHeight) * 100) + '%');
-    // texto que acende
-    const r = fala.getBoundingClientRect(), vh = innerHeight;
-    const p = clamp((vh * .85 - r.top) / (vh * .45 + r.height), 0, 1);
-    ws.forEach((w, i) => w.classList.toggle('on', i / ws.length < p * 1.05));
-    // trilho horizontal
-    if (innerWidth >= 900) { const pr = pin.getBoundingClientRect(), d = pin.offsetHeight - vh; const k = clamp(-pr.top / d, 0, 1); trilho.style.transform = `translateX(${-k * (trilho.scrollWidth - innerWidth)}px)`; }
+    // barra de compra
+    const of = $('#oferta').getBoundingClientRect(), ds = scrollY > innerHeight * .7;
+    $('#barraCta').classList.toggle('on', ds); $('#barraCta').classList.toggle('off', of.top < vh && of.bottom > 0);
     // sala atual
     let n = 0; secs.forEach((s, i) => { if (s.getBoundingClientRect().top < vh * .5) n = i; });
     if (n !== atual) { atual = n; $('#salaN').textContent = n + 1; $('#salaT').textContent = secs[n].dataset.sala; }
